@@ -1,44 +1,42 @@
-## PORTOFOLIO WEB SAYA ##
-di dalam web saya ini terdapat sedikit informasi dari saya
+## Deskripsi tentang yang saya buat
+Project yang saya telah buat ini kurang lebih seperti yang ditunjukkan di video terlampir. Aplikasinya berisi kumpulan berita dan artikel, dan saya merancangnya supaya punya potensi untuk terus dikembangkan agar fiturnya lebih lengkap dan bermanfaat.
 
-## ADA APA SAJA DALAM WEB INI"
-pada halaman home : menampilkan sedikit infomasi tentang jurusan dan nama kampus saya
-pada halaman about : menampilkan sedikit tentang diri saya
+# Cara menjalakannya
+Langkah 1: Buka Command Prompt (CMD)
+Buka CMD atau terminal bawaan 
 
-# CARA MENJALANKAN PROJECT #
-1.Buka Command Prompt (CMD) : Cari "cmd" di pencarian Windows dan buka.
+Langkah 2: Masuk ke Direktori Proyek
+Arahkan ke folder tempat proyek akan dibuat atau sudah ada:
+cd nama_folder
 
-2.Masuk ke Folder Tempat Proyek Akan Dibuat
-Gunakan perintah berikut untuk berpindah ke folder tempat  menyimpan proyek
-(cd nama_folder)
+Langkah 3: Buat Virtual Environment
+Buat virtual environment untuk mengelola  proyek:
+py -m venv .venv
 
-3.Buat Virtual Environment
-Ketik perintah ini untuk membuat virtual environment:
-(py -m venv .venv)
+Langkah 4: Aktifkan Virtual Environment
+Aktifkan virtual environment:
+.venv\Scripts\activate
 
-4.Aktifkan Virtual Environment
-Masuk ke folder virtual environment dengan mengetik:
-(.venv\Scripts\activate)
+Langkah 5: Install Django
+Install Django menggunakan pip:
+pip install django
 
-5.Install Django
-Setelah virtual environment aktif, ketik perintah ini untuk menginstal Django:
-(pip install django)
+Langkah 6: Buat Proyek Django (Opsional, jika belum dibuat)
+Jika belum ada proyek, buat dengan perintah:
+django-admin startproject nama_proyek .
 
-6.Buat Proyek Baru
-Gunakan perintah ini untuk membuat proyek baru:
-(django-admin startproject webrzl)
+Langkah 7: Buat Migrasi Database
+Setelah membuat atau mengedit model, buat file migrasi:
+python manage.py makemigrations
 
-7.Cek Proyek Django yang Dibuat
-Masuk ke folder proyek:
-(cd webrzl)
+Langkah 8: Terapkan Migrasi Database
+Terapkan file migrasi untuk membuat struktur database:
+python manage.py migrate
 
-Jalankan perintah ini untuk memulai server Django:
-(py manage.py runserver)
+Langkah 9: Jalankan Server
+Jalankan server pengembangan untuk memeriksa aplikasi:
+python manage.py runserver
 
-Jika berhasil, Anda akan melihat pesan bahwa server sedang berjalan.
-Buka browser Anda, lalu akses:
-cpp
-Copy
-Edit
+Langkah 10: Akses Aplikasi di Browser
+Buka browser dan akses :
 http://127.0.0.1:8000
-kita akan melihat halaman "Welcome to Django".
