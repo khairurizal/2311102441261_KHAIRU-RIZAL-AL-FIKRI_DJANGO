@@ -1,42 +1,68 @@
-## Deskripsi tentang yang saya buat
-Project yang saya telah buat ini kurang lebih seperti yang ditunjukkan di video terlampir. Aplikasinya berisi kumpulan berita dan artikel, dan saya merancangnya supaya punya potensi untuk terus dikembangkan agar fiturnya lebih lengkap dan bermanfaat.
+## ⚡ DJANGO WEB PROJECT
 
-# Cara menjalakannya
-Langkah 1: Buka Command Prompt (CMD)
-Buka CMD atau terminal bawaan 
+### 📝 Fitur Website
 
-Langkah 2: Masuk ke Direktori Proyek
-Arahkan ke folder tempat proyek akan dibuat atau sudah ada:
-cd nama_folder
+- **🏠 Beranda (Home)**  
+  Menampilkan halaman utama dari website yang menjadi titik awal akses pengguna.
 
-Langkah 3: Buat Virtual Environment
-Buat virtual environment untuk mengelola  proyek:
-py -m venv .venv
+- **📊 Dashboard**  
+  Menampilkan laporan grafis, manajemen data, serta informasi penting dalam tampilan visual yang informatif dan responsif.
 
-Langkah 4: Aktifkan Virtual Environment
-Aktifkan virtual environment:
-.venv\Scripts\activate
+---
 
-Langkah 5: Install Django
-Install Django menggunakan pip:
-pip install django
+### 🔧 Langkah Menjalankan Proyek
 
-Langkah 6: Buat Proyek Django (Opsional, jika belum dibuat)
-Jika belum ada proyek, buat dengan perintah:
-django-admin startproject nama_proyek .
+⚙️ DJANGO
+💡Apa Saja Di Website Ini?
+1. HOME - Menampilkan Halaman Utama dari website.
+2. Dashboard - Menampilkan laporan grafis, manajemen informasi, dan data-data.
 
-Langkah 7: Buat Migrasi Database
-Setelah membuat atau mengedit model, buat file migrasi:
-python manage.py makemigrations
+🪄 Cara Menjalankan Proyek Django:
 
-Langkah 8: Terapkan Migrasi Database
-Terapkan file migrasi untuk membuat struktur database:
-python manage.py migrate
+1. **Buka Command Prompt (CMD)**
+   - Tekan `Win + R`, lalu ketik `cmd` dan tekan Enter.
 
-Langkah 9: Jalankan Server
-Jalankan server pengembangan untuk memeriksa aplikasi:
-python manage.py runserver
+2. **Masuk ke Folder Tempat Proyek Akan Dibuat**
+   - Gunakan perintah `cd` untuk berpindah ke direktori tempat kamu ingin membuat proyek.
+     Contoh:
+     ```
+     cd nama_folder
+     ```
 
-Langkah 10: Akses Aplikasi di Browser
-Buka browser dan akses :
-http://127.0.0.1:8000
+3. **Buat Virtual Environment**
+   - Gunakan perintah berikut untuk membuat virtual environment:
+     ```
+     py -m venv .venv
+     ```
+
+4. **Aktifkan Virtual Environment**
+   - Setelah membuat virtual environment, aktifkan dengan perintah berikut:
+     ```
+     .venv\Scripts\activate
+     ```
+
+5. **Install Django**
+   - Install Django dengan menggunakan pip:
+     ```
+     pip install django
+     ```
+
+6. **Buat Migration**
+   - Setelah instalasi selesai, buat migration dengan perintah:
+     ```
+     python manage.py makemigrations
+     ```
+
+7. **Migrate Database**
+   - Setelah migration dibuat, lakukan migrate ke database dengan perintah:
+     ```
+     python manage.py migrate
+     ```
+
+8. **Jalankan Server**
+   - Terakhir, jalankan server Django dengan perintah:
+     ```
+     python manage.py runserver
+     ```
+
+Setelah itu, buka browser dan akses `http://127.0.0.1:8000/` untuk melihat website yang berjalan.
