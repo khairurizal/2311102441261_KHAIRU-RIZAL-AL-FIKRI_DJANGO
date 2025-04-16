@@ -1,11 +1,10 @@
 from django.shortcuts import render
 
-
 def home(request):
-    template_name = 'home.html'
+    template_name = 'halaman/index.html'
     context = {
-        'title': 'portofolioku',
-        'description': 'portfolio saya',
+        'title': '-HOMEPAGE-',
+        'description': 'web portfolio saya',
         'body': 'Halaman home'
     }
     return render(request, template_name, context)
@@ -13,8 +12,17 @@ def home(request):
 def about(request):
     template_name = 'about.html'
     context = {
-        'title': 'selamat datang di halaman about',
+        'title': '-ABOUT PAGE-',
         'description': 'web portfolio saya',
         'body': 'Halaman about'
+    }
+    return render(request, template_name, context)
+
+def contact(request):
+    template_name = 'contact.html'
+    context = {
+        'title': '- CONTACT -',
+        'description': 'Contact',
+        'body': 'Contact Page'
     }
     return render(request, template_name, context)
