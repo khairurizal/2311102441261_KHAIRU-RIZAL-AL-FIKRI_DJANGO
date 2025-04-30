@@ -21,11 +21,6 @@ class Artikel(models.Model):
 
     def __str__(self):
         return self.judul
-    
+
     class Meta:
         verbose_name_plural = "2. Artikel"
-
-
-  
-
-    
