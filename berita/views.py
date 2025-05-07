@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from berita.models import Kategori, Artikel
+from berita. models import Kategori, Artikel
 from berita.forms import ArtikelForm
 
 # Create your views here.
@@ -14,10 +14,10 @@ def dashboard(request):
 def kategori_list(request):
     template_name = "dashboard/snippets/kategori_list.html"
     kategori = Kategori.objects.all()
-    print(Kategori)
+    print(kategori) 
     context = {
         'title': 'halaman kategori',
-        'Kategori': kategori
+        'kategori': kategori
     }
     return render(request, template_name, context)
 
@@ -25,14 +25,13 @@ def kategori_add(request):
     template_name = "dashboard/snippets/kategori_add.html"
     if request.method == "POST":
         nama_input = request.POST.get('nama_kategori')
-        print(nama_input)
-        Kategori.objects.create(
+        Kategori .objects.create(
             nama = nama_input
         )
         return redirect(kategori_list)
-    
+         
     context = {
-        'title': 'tambah kategori',
+        'title':'tambah kategori',
     }
     return render(request, template_name, context)
 
@@ -42,6 +41,7 @@ def kategori_update(request, id_kategori):
         kategori = Kategori.objects.get(id=id_kategori)
     except:
         return redirect(kategori_list)
+    
     if request.method == "POST":
         nama_input = request.POST.get('nama_kategori')
         kategori.nama = nama_input
@@ -49,8 +49,8 @@ def kategori_update(request, id_kategori):
         return redirect(kategori_list)
     
     context = {
-        'title': 'update kategori',
-        'kategori' : kategori
+        'title':'update kategori',
+        'kategori': kategori
     }
     return render(request, template_name, context)
 
@@ -67,7 +67,7 @@ def artikel_list(request):
     print(artikel)
     context = {
         'title':'daftar artikel',
-        'artikel' : artikel
+        'artikel': artikel
     }
     return render(request, template_name, context)
 
@@ -82,11 +82,10 @@ def artikel_add(request):
             return redirect(artikel_list)
         else:
             print(forms.error_class)
-
     forms = ArtikelForm()
     context = {
         'title':'tambah artikel',
-        'forms':forms
+        'forms': forms
     }
     return render(request, template_name, context)
 
@@ -94,16 +93,16 @@ def artikel_detail(request, id_artikel):
     template_name = "dashboard/snippets/artikel_detail.html"
     artikel = Artikel.objects.get(id=id_artikel)
     context = {
-        'title' : artikel.judul,
-        'artikel' : artikel
+        'title': artikel.judul,
+        'artikel':artikel
     }
     return render(request, template_name, context)
- 
+
 def artikel_update(request, id_artikel):
     template_name = "dashboard/snippets/artikel_forms.html"
     artikel = Artikel.objects.get(id=id_artikel)
     if request.method == "POST":
-        forms=ArtikelForm(request.POST, request.FILES, instance=artikel)
+        forms = ArtikelForm(request.POST, request.FILES, instance=artikel)
         if forms.is_valid():
             pub = forms.save(commit=False)
             pub.author = request.user
@@ -113,7 +112,7 @@ def artikel_update(request, id_artikel):
     forms = ArtikelForm(instance=artikel)
     context = {
         'title':'tambah artikel',
-        'forms':forms
+        'forms': forms
     }
     return render(request, template_name, context)
 

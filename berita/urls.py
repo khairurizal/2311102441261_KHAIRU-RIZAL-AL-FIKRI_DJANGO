@@ -1,3 +1,4 @@
+
 from django.urls import path
 from berita.views import dashboard, kategori_list, kategori_add, kategori_update, kategori_delete, artikel_list, artikel_add, artikel_detail, artikel_update, artikel_delete
 
